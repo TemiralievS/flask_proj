@@ -41,8 +41,7 @@ app.register_blueprint(auth_app, url_prefix="/auth")
 login_manager.init_app(app)
 
 app.config["SECRET_KEY"] = "abcdefg123456"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/blog.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
-
