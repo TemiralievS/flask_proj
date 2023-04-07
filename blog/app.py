@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from blog.views.users import users_app
+from blog.views.authors import authors_app
 from blog.views.articles import articles_app
 from blog.models.database import db
 from blog.views.auth import login_manager, auth_app
@@ -10,6 +11,8 @@ from blog.security import flask_bcrypt
 
 app = Flask(__name__)
 migrate = Migrate(app, db, compare_type=True)
+
+app.register_blueprint(authors_app, url_prefix="/authors")
 
 cfg_name = os.environ.get("CONFIG_NAME") or "ProductionConfig"
 app.config.from_object(f"blog.configs.{cfg_name}")
