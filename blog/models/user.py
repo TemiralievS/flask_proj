@@ -6,6 +6,7 @@ from blog.security import flask_bcrypt
 
 
 class User(db.Model, UserMixin):
+    __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True)
     username = Column(String(80), unique=True, nullable=False)
