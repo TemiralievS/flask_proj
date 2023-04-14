@@ -7,6 +7,7 @@ from blog.views.auth import login_manager, auth_app
 import os
 from flask_migrate import Migrate
 from blog.security import flask_bcrypt
+from blog.admin import admin
 
 
 app = Flask(__name__)
@@ -18,6 +19,8 @@ cfg_name = os.environ.get("CONFIG_NAME") or "ProductionConfig"
 app.config.from_object(f"blog.configs.{cfg_name}")
 
 flask_bcrypt.init_app(app)
+
+admin.init_app(app)
 
 
 @app.route("/")
