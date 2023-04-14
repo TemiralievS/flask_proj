@@ -5,6 +5,7 @@ from blog.models.database import db
 
 
 class Author(db.Model):
+    __tablename__ = 'author'
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=False)
 
