@@ -2,7 +2,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField, SelectMultipleField, validators
 
 
-
 class CreateArticleForm(FlaskForm):
     title = StringField(
         "Title",
