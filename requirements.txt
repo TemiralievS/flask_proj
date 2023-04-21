@@ -7,3 +7,7 @@ Flask-Login==0.6.2
 psycopg2-binary==2.9.5
 Flask-Migrate==3.0.0
 Flask-Admin==1.6.1
+Flask-COMBO-JSONAPI==1.1.0
+ComboJSONAPI==1.1.2
+apispec==6.3.0
+PyYAML==6.0
