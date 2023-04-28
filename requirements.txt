@@ -3,6 +3,7 @@ apispec==4.7.1
 async-timeout==4.0.2
 attrs==22.2.0
 black==21.12b0
+bcrypt==4.0.1
 certifi==2022.12.7
 charset-normalizer==2.0.12
 click==7.1.2
